@@ -1,0 +1,130 @@
+.footerWrapper {
+  width: 100%;
+  background-color: var(--surface);
+  border-top: 1px solid var(--border);
+  margin-top: 80px;
+  padding: 80px 24px 24px;
+}
+
+.footer {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 48px;
+}
+
+.brandCol {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 320px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+}
+
+.logoIcon {
+  color: var(--primary);
+  fill: var(--primary);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+}
+
+.brandDesc {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  font-size: 0.95rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.socialIcon {
+  color: var(--text-secondary);
+  transition: all 0.2s;
+}
+
+.socialIcon:hover {
+  color: var(--primary);
+  transform: translateY(-2px);
+}
+
+.linkCol {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.colTitle {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.linkList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.linkItem {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: all 0.2s;
+}
+
+.linkItem:hover {
+  color: var(--primary);
+}
+
+.bottomBar {
+  max-width: 1400px;
+  margin: 64px auto 0;
+  padding-top: 24px;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+
+.paymentIcons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+@media (max-width: 1024px) {
+  .footer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  
+  .bottomBar {
+    flex-direction: column;
+    gap: 16px;
+    text-align: center;
+  }
+}

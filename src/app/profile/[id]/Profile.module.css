@@ -1,0 +1,137 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 60px 24px;
+}
+
+.profileHeader {
+  background-color: var(--surface);
+  border-radius: 32px;
+  padding: 48px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 4px solid var(--surface);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.06);
+}
+
+.avatarImage {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.verifyBadge {
+  position: absolute;
+  bottom: 4px;
+  right: 4px;
+  background-color: var(--surface);
+  border-radius: 50%;
+  display: flex;
+}
+
+.profileInfo {
+  flex: 1;
+}
+
+.nameRow {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 8px;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  line-height: 1.1;
+}
+
+.bio {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.contactGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.contactItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.contactIcon {
+  color: var(--primary);
+}
+
+.socialItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--primary);
+  font-weight: 600;
+  text-decoration: none;
+  background-color: rgba(15, 61, 46, 0.08); /* Light green tint */
+  padding: 8px 16px;
+  border-radius: var(--radius-full);
+  transition: all 0.2s;
+}
+
+.socialItem:hover {
+  background-color: var(--primary);
+  color: var(--surface);
+}
+
+/* Section styling */
+.sectionTitle {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.qurbaniGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 24px;
+}
+
+@media (max-width: 768px) {
+  .profileHeader {
+    flex-direction: column;
+    text-align: center;
+    padding: 32px;
+  }
+  
+  .nameRow {
+    justify-content: center;
+  }
+  
+  .contactGrid {
+    justify-content: center;
+  }
+}

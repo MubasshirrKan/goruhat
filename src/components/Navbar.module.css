@@ -1,0 +1,166 @@
+.navbarWrapper {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  z-index: 100;
+  padding: 24px;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 1400px;
+  gap: 24px;
+}
+
+.left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoIcon {
+  color: var(--text-primary);
+  fill: var(--text-primary);
+}
+
+.logoText {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.center {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.searchBar {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  height: 56px;
+  background-color: var(--surface);
+  border-radius: var(--radius-full);
+  padding: 8px 8px 8px 24px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.searchBar:focus-within {
+  box-shadow: var(--shadow-md);
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  background: none;
+  outline: none;
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+}
+
+.searchInput::placeholder {
+  color: var(--text-secondary);
+}
+
+.searchBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--text-primary);
+  color: var(--surface);
+  border: none;
+  cursor: pointer;
+  transition: transform var(--transition-fast);
+}
+
+.searchBtn:hover {
+  transform: scale(1.05);
+}
+
+.right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.iconButton {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.iconButton:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.heartIcon {
+  color: #ef4444;
+  fill: #ef4444;
+}
+
+.badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  width: 8px;
+  height: 8px;
+  background-color: #ef4444;
+  border-radius: 50%;
+  border: 2px solid var(--surface);
+}
+
+.userButton {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px 8px 20px;
+  height: 48px;
+  border-radius: var(--radius-full);
+  background-color: var(--surface);
+  color: var(--text-primary);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.userButton:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-2px);
+}
+
+.avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

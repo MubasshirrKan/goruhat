@@ -1,0 +1,284 @@
+.trustSection {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.bentoContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  max-width: 600px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bentoCard {
+  background-color: var(--surface);
+  border-radius: 32px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  position: relative;
+  overflow: hidden;
+}
+
+.bentoCard:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md);
+}
+
+/* Image Card Styling */
+.imageCard {
+  grid-column: span 3;
+  min-height: 400px;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.imageContent {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  z-index: 10;
+}
+
+.imageWrapper {
+  flex: 1.5;
+  height: 100%;
+  position: relative;
+}
+
+.communityImage {
+  object-fit: cover;
+  border-radius: 0 32px 32px 0;
+}
+
+.darkCard {
+  background-color: var(--text-primary);
+  color: var(--surface);
+}
+
+.darkCard .cardTitle {
+  color: var(--surface);
+}
+
+.darkCard .cardText {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.iconWrapper {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: var(--background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-primary);
+}
+
+.iconDark {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--surface);
+}
+
+.cardTag {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-secondary);
+}
+
+.cardTitle {
+  font-size: 1.5rem;
+  font-family: var(--font-heading);
+  color: var(--text-primary);
+}
+
+.cardText {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  flex-grow: 1;
+}
+
+/* Specific Card Visuals */
+.verificationVisual {
+  margin-top: 24px;
+  padding: 16px;
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+}
+
+.userBadge {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #e5e7eb;
+}
+
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.userName {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+.verifiedStatus {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.8rem;
+  color: var(--success);
+  font-weight: 500;
+}
+
+.checkIcon {
+  fill: var(--success);
+  color: var(--surface);
+}
+
+.statsRow {
+  display: flex;
+  gap: 32px;
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.statValue {
+  font-size: 1.75rem;
+  font-family: var(--font-heading);
+  font-weight: 700;
+}
+
+.statLabel {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ratingBadge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 6px 12px;
+  background-color: var(--background);
+  border-radius: var(--radius-full);
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.starFill {
+  fill: #f59e0b;
+  color: #f59e0b;
+}
+
+.reviewSnippet {
+  margin-top: 24px;
+  padding: 20px;
+  background-color: var(--background);
+  border-radius: var(--radius-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stars {
+  display: flex;
+  gap: 2px;
+}
+
+.quote {
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+.author {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .imageCard {
+    grid-column: span 2;
+    flex-direction: column;
+  }
+  .imageWrapper {
+    height: 300px;
+    width: 100%;
+  }
+  .communityImage {
+    border-radius: 0 0 32px 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .imageCard {
+    grid-column: span 1;
+  }
+}

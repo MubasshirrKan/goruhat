@@ -1,0 +1,251 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 24px;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+/* Form Sections */
+.formSection {
+  background-color: var(--surface);
+  border-radius: 32px;
+  padding: 40px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.stepTitle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border);
+}
+
+.stepIcon {
+  color: var(--primary);
+}
+
+/* Inputs */
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.input {
+  width: 100%;
+  padding: 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background-color: var(--background);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  transition: all 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: var(--surface);
+  box-shadow: 0 0 0 4px rgba(15, 61, 46, 0.1);
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+/* Payment Methods */
+.paymentGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.paymentOption {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border-radius: 16px;
+  border: 2px solid var(--border);
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.paymentOptionSelected {
+  border-color: var(--primary);
+  background-color: var(--primary-light);
+  color: var(--surface);
+}
+
+.paymentOptionSelected .paymentIcon {
+  color: var(--surface);
+}
+
+.paymentIcon {
+  color: var(--text-secondary);
+}
+
+.paymentName {
+  font-weight: 600;
+  font-size: 1.05rem;
+}
+
+/* Summary Panel */
+.summaryPanel {
+  background-color: var(--surface);
+  border-radius: 32px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid rgba(0, 0, 0, 0.02);
+  position: sticky;
+  top: 120px;
+}
+
+.summaryTitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 24px;
+}
+
+.summaryItem {
+  display: flex;
+  gap: 16px;
+  padding-bottom: 16px;
+  border-bottom: 1px dashed var(--border);
+  margin-bottom: 16px;
+}
+
+.summaryItemImg {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  background-color: var(--background);
+  object-fit: contain;
+}
+
+.summaryItemInfo {
+  flex: 1;
+}
+
+.summaryItemName {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.summaryItemShares {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+}
+
+.summaryRows {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+.summaryRow.total {
+  border-top: 1px dashed var(--border);
+  padding-top: 16px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.confirmBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: var(--primary);
+  color: var(--surface);
+  border-radius: var(--radius-full);
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  transition: all var(--transition-normal);
+  border: none;
+  cursor: pointer;
+}
+
+.confirmBtn:hover {
+  background-color: var(--primary-light);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(15, 61, 46, 0.2);
+}
+
+.emptyState {
+  text-align: center;
+  padding: 60px;
+  background-color: var(--surface);
+  border-radius: 32px;
+}
+
+@media (max-width: 1024px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .summaryPanel {
+    position: relative;
+    top: 0;
+  }
+}
+
+@media (max-width: 768px) {
+  .formGrid {
+    grid-template-columns: 1fr;
+  }
+  .paymentGrid {
+    grid-template-columns: 1fr;
+  }
+}
