@@ -4,14 +4,14 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import { motion } from 'framer-motion';
+import { motion, Variants } from 'framer-motion';
 import { Trash2, Minus, Plus, ShieldCheck, ShoppingCart, ArrowRight } from 'lucide-react';
 import { usePlatform } from '@/context/PlatformContext';
 import styles from './Cart.module.css';
 
-const fadeUpVariant = {
+const fadeUpVariant: Variants = {
   hidden: { opacity: 0, y: 20 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" } }
+  visible: { opacity: 1, y: 0, transition: { duration: 0.5, ease: "easeOut" as any } }
 };
 
 export default function CartPage() {
